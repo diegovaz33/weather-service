@@ -12,8 +12,6 @@ describe('GET /api/weather', () => {
       });
     
     it('returns weather data for valid requests', async () => {
-        // This assumes you have a way to mock the external API call within your application
-        // For real testing, you might hit a test instance of the API or mock the service layer
         const response = await request(app)
           .get('/api/weather?lat=40.712776&lon=-74.005974')
           .expect('Content-Type', /json/)
