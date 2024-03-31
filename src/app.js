@@ -2,13 +2,13 @@ const express = require('express');
 const weatherRoutes = require('./api/weather');
 
 const app = express();
-const port = 3000;
 
 app.use(express.json());
 app.use('/api/weather', weatherRoutes);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+if (require.main === module) {
+    const port = process.env.TEST_PORT || 3000;
+    app.listen(port, () => console.log(`Server listening on port ${port}`));
+}
 
 module.exports = app; // Export for testing
