@@ -4,8 +4,8 @@ const weatherService = require('../services/weatherService');
 
 router.get('/', async (req, res) => {
     try {
-        const { latitude, longitude } = req.query;
-        const weatherData = await weatherService.getWeather(latitude, longitude);
+        const { lat, lon } = req.query;
+        const weatherData = await weatherService.getWeather(lat, lon);
         res.json(weatherData);
     } catch (err) {
         res.status(500).json({ message: err.message });

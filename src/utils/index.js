@@ -1,7 +1,4 @@
 const processWeatherData = (data) => {
-    // Implement logic to process and return necessary weather information
-    // e.g., current weather, temperature category, and alerts
-
     const { current, alerts } = data;
     const weather = {
         temperature: current.temp,
