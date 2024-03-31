@@ -1,4 +1,9 @@
 const processWeatherData = (data) => {
+
+    if (!data || !data.current || !data.current.weather) {
+        throw new Error('Invalid weather data format');
+    }
+    
     const { current, alerts } = data;
     const weather = {
         temperature: current.temp,

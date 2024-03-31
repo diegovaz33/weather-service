@@ -4,7 +4,8 @@
   "description": "# Information: Author: Diego Vazquez Date: 03/29/2024 email: dvazqueb11@gmail.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "TEST_PORT=3001 jest --coverage",
+    "test:watch": "jest --watch",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
