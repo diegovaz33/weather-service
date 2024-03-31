@@ -39,6 +39,7 @@ describe('weatherService', () => {
 
 });
 
+// Testing condition categories
 describe('temperature category edge cases', () => {
     const testCases = [
       { temp: -1, expected: 'cold' },

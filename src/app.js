@@ -3,7 +3,7 @@ const weatherRoutes = require('./api/weather');
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json()); // Middleware
 app.use('/api/weather', weatherRoutes);
 
 if (require.main === module) {
